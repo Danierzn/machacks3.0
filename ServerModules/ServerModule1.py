@@ -1,43 +1,18 @@
-import anvil.server
-import cohere 
+import cohere
 from cohere.classify import Example
 
-co = cohere.Client('fZf3vVCtJkS69wYLEJWyr8WGRUupRJ4NnMSUwL0e') # API key 
-
-examples = [
-  Example("you are hot trash", "Toxic"),  
-  Example("go to hell", "Toxic"),
-  Example("get rekt moron", "Toxic"),  
-  Example("get a brain and use it", "Toxic"), 
-  Example("say what you mean, you jerk.", "Toxic"), 
-  Example("Are you really this stupid", "Toxic"), 
-  Example("I will honestly kill you", "Toxic"),  
-  Example("yo how are you", "Benign"),  
-  Example("I'm curious, how did that happen", "Benign"),  
-  Example("Try that again", "Benign"),  
-  Example("Hello everyone, excited to be here", "Benign"), 
-  Example("I think I saw it first", "Benign"),  
-  Example("That is an interesting point", "Benign"), 
-  Example("I love this", "Benign"), 
-  Example("We should try that sometime", "Benign"), 
-  Example("You should go for it", "Benign")
-]
-
-inputs = [
-  "this game sucks, you suck",  
-    "stop being a dumbass",
-    "Let's do this once and for all",
-  "This is coming along nicely",
-  "bitch don't kill my vibe",
-  "you just need to get it over it"
-]
+co = cohere.Client('fZf3vVCtJkS69wYLEJWyr8WGRUupRJ4NnMSUwL0e') # This is your trial API key
 
 @anvil.server.callable 
 def rheaModel():
+  """
   response = co.classify(  
-    model='large',  
-    inputs=inputs,  
-    examples=examples)
+    model='<model>',  
+    inputs=inputs)
+  """ 
+  response = co.classify(
+  model='48112639-5bee-4b80-8f70-1f5f60b645fe-ft',
+  inputs=["I'm gonna kill myself.", "Today was really boring."]) # add more examples, here we should add parsed user data from social media accounts
 
   responses = [] 
   
