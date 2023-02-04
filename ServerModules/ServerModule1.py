@@ -1,7 +1,7 @@
 import cohere
 from cohere.classify import Example
 
-co = cohere.Client('fZf3vVCtJkS69wYLEJWyr8WGRUupRJ4NnMSUwL0e') # This is your trial API key
+co = cohere.Client('fZf3vVCtJkS69wYLEJWyr8WGRUupRJ4NnMSUwL0e') # API key
 
 def rheaModel():
   """
