@@ -3,7 +3,6 @@ from cohere.classify import Example
 
 co = cohere.Client('fZf3vVCtJkS69wYLEJWyr8WGRUupRJ4NnMSUwL0e') # This is your trial API key
 
-@anvil.server.callable 
 def rheaModel():
   """
   response = co.classify(  
