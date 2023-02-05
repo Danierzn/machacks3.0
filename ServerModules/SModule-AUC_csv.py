@@ -1,9 +1,18 @@
 import cohere
+import csv
 from cohere.classify import Example
 import numpy as np 
 from sklearn import metrics 
 
 co = cohere.Client('fZf3vVCtJkS69wYLEJWyr8WGRUupRJ4NnMSUwL0e') # This is your trial API key
+
+def csvLoader(item):
+  with open (f'{item}', 'r') as fh:
+    w = csv.DictReader(fh)
+    up_dt = []
+    for r in w:
+      up_dt.append(r['text'])
+    return up_dt
 
 def rheaModel():
   """
@@ -11,9 +20,12 @@ def rheaModel():
     model='<model>',  
     inputs=inputs)
   """ 
+  filename = input("Input file name: ")
+  contents = csvLoader(f"database/{filename}.csv")
+  print(contents)
   response = co.classify(
   model='48112639-5bee-4b80-8f70-1f5f60b645fe-ft',
-  inputs=["I'm gonna kill myself.", "Today was really boring."]) # add more examples, here we should add parsed user data from social media accounts
+  inputs= contents)# add more examples, here we should add parsed user data from social media accounts
 
   ys = [] 
   preds = [] 
@@ -33,6 +45,9 @@ def rheaModel():
   fpr, tpr, thresholds = metrics.roc_curve(y, pred)
 
   auc = metrics.auc(fpr, tpr) 
+  
+  if np.isnan(auc):
+    auc = 0
 
   return auc, flag 
 
