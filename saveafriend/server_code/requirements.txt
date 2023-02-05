@@ -1,0 +1,4 @@
+cohere
+numpy
+scikit-learn
+matplotlib

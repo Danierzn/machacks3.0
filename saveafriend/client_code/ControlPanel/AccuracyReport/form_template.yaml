@@ -1,0 +1,73 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - type: Label
+    properties: {role: title, align: left, tooltip: '', border: '', foreground: 'theme:Primary',
+      visible: true, text: Accuracy Report, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: large, italic: true, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_2
+    layout_properties: {grid_position: 'WJBSNT,THCGDE'}
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: column_panel_2
+    layout_properties: {grid_position: 'JUSGSN,VEEYXF'}
+    components:
+    - type: Image
+      properties: {role: null, vertical_align: center, height: 332, tooltip: '', border: '',
+        foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: small,
+        source: '', spacing_below: small, background: 'theme:Secondary', horizontal_align: center}
+      name: image_1
+      layout_properties: {grid_position: 'DCAUMR,NQQCEA'}
+  - type: Label
+    properties: {role: body, align: center, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Our model has an AUC (Area under the ROC Curve) and accuracy
+        of ', font_size: 18, font: '', spacing_above: large, icon_align: left, spacing_below: small,
+      italic: false, background: '', bold: false, underline: false, icon: ''}
+    name: label_3
+    layout_properties: {grid_position: 'ULAGOV,FPQUOB'}
+  - type: Label
+    properties: {role: headline, align: center, tooltip: '', border: '', foreground: 'theme:Primary',
+      visible: true, text: '', font_size: null, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: false, underline: false,
+      icon: ''}
+    name: label_auc
+    layout_properties: {grid_position: 'IIRPYE,OPCIVJ'}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+- type: Label
+  properties: {role: title, align: left, tooltip: '', border: '', foreground: 'theme:Primary',
+    visible: true, text: saveafriend. Admin Panel, font_size: null, font: SF Pro Display,
+    spacing_above: small, icon_align: left, spacing_below: small, italic: true, background: '',
+    bold: false, underline: false, icon: 'fa:phone'}
+  name: label_1
+  layout_properties: {slot: title}
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_1
+  layout_properties: {slot: left-nav}
+  components:
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: About, font_size: 17, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: button_3
+    layout_properties: {grid_position: 'CMVSEH,FRQTMK'}
+    event_bindings: {click: button_3_click}
+- type: Label
+  properties: {role: body, align: center, tooltip: '', border: '', foreground: 'theme:Error',
+    visible: true, text: '', font_size: 18, font: '', spacing_above: large, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: true, underline: false,
+    icon: ''}
+  name: label_prediction
+  layout_properties: {grid_position: 'ULAGOV,FPQUOB'}

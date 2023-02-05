@@ -1,0 +1,101 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+    wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+    spacing_below: none, background: ''}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - type: ColumnPanel
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{}',
+      spacing_below: none, background: ''}
+    name: column_panel_2
+    layout_properties: {grid_position: 'YBGQFV,FUDGCW'}
+    components: []
+  - type: Label
+    properties: {role: headline, align: center, tooltip: '', border: '', foreground: 'theme:Primary',
+      visible: true, text: Resources, font_size: null, font: '', spacing_above: medium,
+      icon_align: left, spacing_below: large, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_2
+    layout_properties: {grid_position: 'WJBSNT,THCGDE'}
+  - type: Label
+    properties: {role: title, align: center, tooltip: '', border: '', foreground: 'theme:Primary',
+      visible: true, text: TalkSuicide Canada, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: true, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_5
+    layout_properties: {grid_position: 'BDIJEI,IITFNW'}
+  - type: Label
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      visible: true, text: 1-833-456-4566 (24/7); text 45645 (4 PM - 12 AM ET), font_size: 17,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: label_4
+    layout_properties: {grid_position: 'DXZPUR,XXBGNE'}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+- type: Label
+  properties: {role: title, align: left, tooltip: '', border: '', foreground: 'theme:Primary',
+    visible: true, text: saveafriend., font_size: null, font: SF Pro Display, spacing_above: small,
+    icon_align: left, spacing_below: small, italic: true, background: '', bold: false,
+    underline: false, icon: 'fa:phone'}
+  name: label_1
+  layout_properties: {slot: title}
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_1
+  layout_properties: {slot: left-nav}
+  components:
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Home, font_size: 17, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: button_4
+    layout_properties: {grid_position: 'VFUTNF,HAPFMQ'}
+    event_bindings: {click: button_4_click}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: About, font_size: 17, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: button_3
+    layout_properties: {grid_position: 'PDATPY,NJAWAF'}
+    event_bindings: {click: button_3_click}
+- type: Label
+  properties: {role: title, align: center, tooltip: '', border: '', foreground: 'theme:Primary',
+    visible: true, text: Kids Health Phone, font_size: null, font: '', spacing_above: none,
+    icon_align: left, spacing_below: small, italic: true, background: '', bold: false,
+    underline: false, icon: ''}
+  name: label_5_copy
+  layout_properties: {grid_position: 'BDIJEI,IITFNW'}
+- type: Label
+  properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+    visible: true, text: Call 1-800-668-6868 (toll-free) or text CONNECT to 686868 (24/7),
+    font_size: 17, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: label_4_copy
+  layout_properties: {grid_position: 'DXZPUR,XXBGNE'}
+- type: Label
+  properties: {role: title, align: center, tooltip: '', border: '', foreground: 'theme:Primary',
+    visible: true, text: 'Hope for Wellness Help Line
+
+      ', font_size: null, font: '', spacing_above: none, icon_align: left, spacing_below: small,
+    italic: true, background: '', bold: false, underline: false, icon: ''}
+  name: label_5_copy_2
+  layout_properties: {grid_position: 'BDIJEI,IITFNW'}
+- type: Label
+  properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+    visible: true, text: Call 1-855-242-3310 (toll-free); available to all Indigenous peoples across Canada,
+    font_size: 17, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+    italic: false, background: '', bold: false, underline: false, icon: ''}
+  name: label_4_copy_2
+  layout_properties: {grid_position: 'DXZPUR,XXBGNE'}

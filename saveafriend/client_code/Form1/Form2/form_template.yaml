@@ -1,0 +1,91 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - type: ColumnPanel
+    properties: {role: null, tooltip: '', border: '', foreground: '', visible: true,
+      wrap_on: mobile, col_spacing: medium, spacing_above: none, col_widths: '{}',
+      spacing_below: none, background: ''}
+    name: column_panel_2
+    layout_properties: {grid_position: 'YBGQFV,FUDGCW'}
+    components:
+    - type: Image
+      properties: {role: null, vertical_align: center, height: 177, tooltip: '', border: '',
+        foreground: '', visible: true, display_mode: shrink_to_fit, spacing_above: none,
+        source: 'https://i.postimg.cc/rmsBKrJ8/Untitled-design.png', spacing_below: none,
+        background: '', horizontal_align: center}
+      name: image_1
+      layout_properties: {grid_position: 'NURBOW,ZSXSDC'}
+  - type: Label
+    properties: {role: headline, align: center, tooltip: '', border: '', foreground: 'theme:Primary',
+      visible: true, text: 'Why use saveafriend?', font_size: null, font: '', spacing_above: none,
+      icon_align: left, spacing_below: large, italic: true, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_2
+    layout_properties: {grid_position: 'WJBSNT,THCGDE'}
+  - type: Label
+    properties: {role: input-prompt, align: center, tooltip: '', border: '', foreground: 'theme:On
+        Primary Container', visible: true, text: 'Do you suspect someone you know
+        is about to inflict self harm or commit suicide?', font_size: 24, font: '',
+      spacing_above: large, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: label_3
+    layout_properties: {grid_position: 'SZFPTZ,YRDITJ'}
+  - type: Label
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      visible: true, text: "We\u2019re here to support you.\n\nIn today\u2019s digital\
+        \ society, a user\u2019s digital footprint can paint a significant story regarding\
+        \ their behaviour and feelings. \n\nWe use an innovative machine learning\
+        \ approach to identify SI (suicidal ideation) from your friend\u2019s social\
+        \ media data. If we identify SI, we send an appropriate alert to the RCMP\
+        \ who will then contact the appropriate local emergency stations using your\
+        \ friend\u2019s geolocation.", font_size: 17, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_4
+    layout_properties: {grid_position: 'EBEDEU,UVGQQP'}
+  - type: Label
+    properties: {role: title, align: center, tooltip: '', border: '', foreground: 'theme:Primary',
+      visible: true, text: 'Don’t wait to SaveAFriend. ', font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: true,
+      background: '', bold: false, underline: false, icon: ''}
+    name: label_5
+    layout_properties: {grid_position: 'RQMVOL,MGEAXN'}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+- type: Label
+  properties: {role: title, align: left, tooltip: '', border: '', foreground: 'theme:Primary',
+    visible: true, text: saveafriend., font_size: null, font: SF Pro Display, spacing_above: small,
+    icon_align: left, spacing_below: small, italic: true, background: '', bold: false,
+    underline: false, icon: 'fa:phone'}
+  name: label_1
+  layout_properties: {slot: title}
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_1
+  layout_properties: {slot: left-nav}
+  components:
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Home, font_size: 17, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: button_4
+    layout_properties: {grid_position: 'VFUTNF,HAPFMQ'}
+    event_bindings: {click: button_4_click}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: Resources, font_size: 17, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: button_2
+    layout_properties: {grid_position: 'MKDDTJ,HPBXHO'}
+    event_bindings: {click: button_2_click}

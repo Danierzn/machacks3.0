@@ -1,0 +1,99 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - type: Label
+    properties: {role: title, align: left, tooltip: '', border: '', foreground: 'theme:Primary',
+      visible: true, text: Queue, font_size: null, font: '', spacing_above: small,
+      icon_align: left, spacing_below: large, italic: true, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_2
+    layout_properties: {grid_position: 'WJBSNT,THCGDE'}
+  - type: DataGrid
+    properties:
+      role: null
+      columns:
+      - {id: EUKVQP, title: User, data_key: user, $$hashKey: 'object:50625'}
+      - {id: QBCNGF, title: Last Name, data_key: last_name, $$hashKey: 'object:50626'}
+      - {id: KWQGDK, title: User Location, data_key: user_location, $$hashKey: 'object:50627'}
+      auto_header: true
+      tooltip: ''
+      border: ''
+      foreground: ''
+      rows_per_page: 20
+      visible: true
+      wrap_on: never
+      show_page_controls: true
+      spacing_above: small
+      spacing_below: small
+      background: ''
+    name: data_grid_1
+    layout_properties: {grid_position: 'AQQSTM,TKSBBR'}
+    components:
+    - type: ColumnPanel
+      properties: {col_widths: '{}'}
+      name: column_panel_2
+      layout_properties: {}
+      components:
+      - type: TextBox
+        properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Enter search term...,
+          border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+          font: '', spacing_above: small, type: text, spacing_below: small, italic: true,
+          background: '', bold: false, underline: false}
+        name: text_box_search
+        layout_properties: {grid_position: 'BAPOPE,WFHLNG'}
+      - type: Button
+        properties: {role: tonal-button, align: center, tooltip: '', border: '', enabled: true,
+          foreground: '', visible: true, text: Search, font_size: null, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '', bold: false, underline: false, icon: 'fa:search'}
+        name: button_1
+        layout_properties: {grid_position: 'BAPOPE,NOTNSM'}
+        event_bindings: {click: search}
+    - type: RepeatingPanel
+      properties: {spacing_above: none, spacing_below: none, item_template: ControlPanel.RowTemplate2}
+      name: repeating_panel_1
+      layout_properties: {}
+  - type: ColumnPanel
+    properties: {col_widths: '{}'}
+    name: column_panel_3
+    layout_properties: {grid_position: 'VNBJFH,PDKNEE'}
+    components:
+    - type: Button
+      properties: {role: tonal-button, align: center, tooltip: '', border: '', enabled: true,
+        foreground: '', visible: true, text: Accuracy report, font_size: 24, font: '',
+        spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false, icon: ''}
+      name: button_accuracy_report
+      layout_properties: {grid_position: 'QOPXOM,ATTJAD'}
+      event_bindings: {click: button_report_click}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+- type: Label
+  properties: {role: title, align: left, tooltip: '', border: '', foreground: 'theme:Primary',
+    visible: true, text: saveafriend. Admin Panel, font_size: null, font: SF Pro Display,
+    spacing_above: small, icon_align: left, spacing_below: small, italic: true, background: '',
+    bold: false, underline: false, icon: 'fa:phone'}
+  name: label_1
+  layout_properties: {slot: title}
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: column_panel_1
+  layout_properties: {slot: left-nav}
+  components:
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '', visible: true, text: About, font_size: 17, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: button_3
+    layout_properties: {grid_position: 'CMVSEH,FRQTMK'}
+    event_bindings: {click: button_3_click}
