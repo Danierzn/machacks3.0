@@ -21,7 +21,7 @@ who need help.
 SaveAFriend uses an innovative learning model adapted from the [NPJ Digital Medicine Journal](https://www.nature.com/articles/s41746-020-0287-6) to identify suicidal ideation (SI) in an individual. All a concerned friend needs to do is enter their friend's social media handle @user and we parse through their social medias where we look for themes of SI and alerting the necessary authorities to bring help to their way. The application of the AI takes user input of specific users from common social media platforms such as Twitter, Reddit, and Facebook, and calculates the [AUS](https://arize.com/blog/what-is-auc/#:~:text=To%20calculate%20AUC%2C%20we%20need,positive%20and%20negative%20classes%2C%20respectively) of each user based on their suicidal idiation, based on the time they posted, the amount of times they posted, to determine the seriousness of the situation. With the info, the AI can automatically alert authorities that specialize in online crime with the info automatically sent so the social media user gets the assistance they need. 
 
 ## How we Built it
-Primarily using the [Cohere API](https://docs.cohere.ai/), we created the AI module within Python with datasets in
+Primarily using the [Cohere API](https://docs.cohere.ai/)'s Classify, we created the AI module within Python with datasets in
 csv format. This handled with the inner structures of the AI and the training process
 to bring the AI into action. Afterwards, we integrated the back-end of the project into
 a mobile application. This was created with Flask and Anvil which we then brought it
